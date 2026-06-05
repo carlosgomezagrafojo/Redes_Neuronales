@@ -1,0 +1,19 @@
+{
+    "id_siniestro": "SIN-2026-002",
+    "matricula_vehiculo": "4337JPK",
+    "importe_reparacion": 750.0,
+    "usuario_responsable": "PERITO_CARLOS_GOMEZ",
+    "camino_a_automatizado": [
+        {
+            "archivo": "Imagen1.jpeg",
+            "analisis": "Vehículo verificado con éxito",
+            "confianza_ia": "60.35%"
+        }
+    ],
+    "camino_b_revision_danos": [
+        {
+            "archivo": "Imagen3.jpeg",
+            "analisis": "Evidencia de daño o plano cercano"
+        }
+    ]
+}
