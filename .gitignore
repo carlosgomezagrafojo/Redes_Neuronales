@@ -1,11 +1,58 @@
-# Ignorar el entorno virtual local
+# =====================================================================
+# 1. ENTORNOS VIRTUALES Y CONFIGURACIÓN (Mantener local)
+# =====================================================================
 venv/
 .venv/
 env/
+ENV/
+bin/
+lib/
+include/
 
-# Ignorar archivos ocultos del sistema operativo
-.DS_Store
-Thumbs.db
+# =====================================================================
+# 2. ARCHIVOS DE DATOS (No subir imágenes de prueba ni reportes locales)
+# =====================================================================
+# Ignoramos las imágenes de entrada y los JSON de salida para que cada
+# usuario corra el script en su máquina sin pisar tus datos.
+data/input_imagenes/
+data/out_put_json/
 
-# Ignorar checkpoints de Jupyter Notebooks si trabajas con ellos
+# Si en algún momento guardas archivos CSV o Excel de pruebas:
+*.csv
+*.xlsx
+
+# =====================================================================
+# 3. MODELOS PESADOS DE IA (Redes Neuronales)
+# =====================================================================
+# Los pesos de YOLOv8 (.pt) pesan megabytes y se descargan por código.
+# Nunca deben subirse al histórico de Git.
+*.pt
+modelos/
+
+# =====================================================================
+# 4. ARCHIVOS OCULTOS Y CACHÉ DE PYTHON
+# =====================================================================
+# Carpetas que crea Python automáticamente al ejecutar scripts o YOLO
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Jupyter Notebooks checkpoints
 .ipynb_checkpoints/
+
+# =====================================================================
+# 5. CONFIGURACIÓN DEL EDITOR (VS Code / IDEs)
+# =====================================================================
+.vscode/
+.idea/
+
+# =====================================================================
+# 6. ARCHIVOS DE SISTEMA OPERATIVO
+# =====================================================================
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+desktop.ini
