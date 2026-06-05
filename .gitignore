@@ -1,0 +1,11 @@
+# Ignorar el entorno virtual local
+venv/
+.venv/
+env/
+
+# Ignorar archivos ocultos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Ignorar checkpoints de Jupyter Notebooks si trabajas con ellos
+.ipynb_checkpoints/
